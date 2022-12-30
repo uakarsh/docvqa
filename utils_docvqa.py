@@ -330,7 +330,7 @@ def convert_examples_to_features(examples,label_list, tokenizer, max_seq_length,
       #  label_ids[start_position]=0
       #  label_ids[end_position]=1
 
-      if example_index < 20:
+      if example_index == -20:
         tf.logging.info("*** Example ***")
         tf.logging.info("unique_id: %s" % (unique_id))
         tf.logging.info("example_index: %s" % (example_index))

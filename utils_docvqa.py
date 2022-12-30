@@ -92,7 +92,7 @@ class InputFeatures(object):
         self.p_mask = p_mask
 def read_docvqa_examples(input_file, is_training, skip_match_answers=True):
   """Read a SQuAD json file into a list of SquadExample."""
-  with tf.io.gfile.Open(input_file, "r") as reader:
+  with open(input_file, "r") as reader:
     input_data = json.load(reader)
 
   def is_whitespace(c):

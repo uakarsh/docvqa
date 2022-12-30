@@ -44,7 +44,8 @@ class DocvqaExample(object):
                start_position=None,
                end_position=None,
                is_impossible=False,
-               boxes = []):
+               boxes = [],
+                image = None):
         self.qas_id = qas_id
         self.question_text = question_text
         self.doc_tokens = doc_tokens
@@ -53,6 +54,7 @@ class DocvqaExample(object):
         self.end_position = end_position
         self.is_impossible = is_impossible
         self.boxes = boxes
+        self.image = image
 
 
 class InputFeatures(object):
